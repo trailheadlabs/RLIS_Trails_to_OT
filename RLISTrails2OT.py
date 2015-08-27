@@ -228,7 +228,7 @@ def process_trail_segments():
 
     #step 3 - remove atomically stored trails (with county) that are
     # *impure* subsets of a regional trail superset
-    #this sucks
+
     #So let's look for where the name matches the atomic name of an existing
     #named trail - the assumption being that the atomic name of a regional
     #trail will not include the pipe '|' and county
@@ -287,7 +287,7 @@ def process_areas():
     areas = []
     counter = 0
     for sr in reader.shapeRecords():
-        if counter == 1000: break #Take the 1st 10,000 features, ORCA is a supermassive YKW
+        # if counter == 1000: break #Take the 1st 10,000 features, ORCA is a supermassive YKW
         atr = dict(zip(field_names, sr.record))
 
         # if atr['STATUS'] == 'Closed': #We don't want any closed sites to show up.
@@ -311,7 +311,7 @@ def process_areas():
         """
 
         # if atr['COUNTY'] in ['Clackamas', 'Multnomah', 'Washington'] and ((atr['OWNLEV1'] in ['Private', 'Non-Profits'] and (atr['UNITTYPE'] in ['Natural Area', 'Other'] and atr['RECREATION']=='Yes') or atr['CONSERVATI']=='High') or (atr['OWNLEV1'] not in ['Private', 'Non-Profits'] and (atr['UNITTYPE']== 'Other' and (atr['RECREATION']=='Yes' or atr['CONSERVATI'] in ['High', 'Medium']) or atr['UNITTYPE'] == 'Natural Area') ) or atr['OWNLEV2'] == 'Non-profit Conservation' or atr['UNITTYPE']== 'Park'):
-        if 1:
+        if atr['TYPE'] == 'Park and/or Natural Area':
             props = collections.OrderedDict()
 
             # if atr['MANAGER'] not in stewards.iterkeys():
@@ -357,7 +357,9 @@ def process_areas():
             _area['properties'] = props
             _area['geometry'] = new_geom
 
+
             areas.append(_area)
+
 
             counter +=1
     # free up the shp file.
@@ -385,7 +387,7 @@ if __name__ == "__main__":
         STEWARDS.append(row)
       for row in STEWARDS:
         row['steward_id'] = int(row['steward_id'])
-    print "sucked up stewards"
+    print "Parsed Stewards"
     #
     #
     #####################################################
@@ -399,7 +401,7 @@ if __name__ == "__main__":
       NAMED_TRAIL_IDS = list(reader)
       for row in NAMED_TRAIL_IDS:
         row[0] = int(row[0])
-    print "Sucked up Named trail ids"
+    print "Parsed Named Trail IDs"
 
     #####################################################
     # Load Named Trails into Python object
@@ -411,7 +413,7 @@ if __name__ == "__main__":
       for row in reader:
         # print row
         ORCA_SITES[int(row[0])] = int(row[1])
-    print "Sucked up orca sites"
+    print "Parsed ORCA Sites"
 
     #
     #
