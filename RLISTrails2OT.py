@@ -26,6 +26,7 @@ import csv
 # http://www.codeforamerica.org/specifications/trails/spec.html
 
 TRAILS_URL = 'http://library.oregonmetro.gov/rlisdiscovery/trails.zip'
+PARKS_URL = 'http://library.oregonmetro.gov/rlisdiscovery/orca_sites.zip'
 
 WGS84 = pyproj.Proj("+init=EPSG:4326") # LatLon with WGS84 datum used for geojson
 ORSP = pyproj.Proj("+init=EPSG:2913", preserve_units=True) # datum used by Oregon Metro
@@ -123,7 +124,7 @@ def process_trail_segments():
         atr = dict(zip(field_names, sr.record))
 
         # we're only allowing open existing trails to pass
-        if atr['STATUS'].upper() == 'OPEN' and atr['SYSTEMTYPE'].upper() != 'OTHER' and atr['TRLSURFACE'] != 'Water':
+        if (atr['STATUS'].upper() == 'OPEN' or atr['STATUS'].upper() == 'OPEN_FEE') and atr['SYSTEMTYPE'].upper() != 'OTHER':
             props = collections.OrderedDict()
 
             #effectively join to the stewards table

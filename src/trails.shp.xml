@@ -1,0 +1,702 @@
+<?xml version="1.0"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Metro Data Resource Center</origin>
+				<pubdate>201008</pubdate>
+				<title>Trails</title>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>Regional Trails data set created by combining 31 different data sets and verified with orthophotography where applicable.</abstract>
+			<purpose>Regional Trails to be published quarterly for RLIS Lite and provide trail information for various needs.  This data set was created specifically for off-road trails and paths, though there are some regional connections that are on-street.</purpose>
+			<supplinf><![CDATA[The schema was created by following the National Recreation & Park Association (NRPA) GIS Model for trails to set a standard among data providers.]]></supplinf>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>20160428</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>Ground condition</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>Continually</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>-123.785577699</westbc>
+				<eastbc>-121.440498206</eastbc>
+				<northbc>46.3880499964</northbc>
+				<southbc>44.6838701483</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>Trails</themekey>
+				<themekey>Pathways</themekey>
+				<themekey>Paths</themekey>
+				<themekey>Pedestrian</themekey>
+				<themekey>Walkways</themekey>
+			</theme>
+			<place>
+				<placekt>None</placekt>
+				<placekey>Portland</placekey>
+				<placekey>Multnomah County</placekey>
+				<placekey>Washington County</placekey>
+				<placekey>Clackamas County</placekey>
+				<placekey>Oregon</placekey>
+			</place>
+		</keywords>
+		<accconst>None</accconst>
+		<useconst>This database and GIS data are made available under the Open Database License (ODbL v1) and Database Content License (DbCL v1). See http://www.oregonmetro.gov/rlis-live.</useconst>
+		<browse>
+			<browsen>http://library.oregonmetro.gov/rlisdiscovery/browse_graphic/trails.png</browsen>
+			<browsed></browsed>
+			<browset>PNG</browset>
+		</browse>
+	</idinfo>
+	<dataqual>
+		<logic></logic>
+		<complete></complete>
+		<posacc>
+			<horizpa>
+				<horizpar>Registered to tax lots. Street center lines were digitized from aerial orthophotography at +/- 10 feet accuracy. Tax lots were fit to the street centerlines. Beaverton, Oregon City and Tigard planning areas were improved to +/- 5 feet accuracy. Multnomah County was created with coordinate geometry using better control.</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<procstep>
+				<procdesc>Existing Trails:  31 Data sources provided a base to begin verifying alignment with aerial orthophotography.  Attribute data was populated from these source layers.  Where there was no attribute data provided, there was thorough research conducted to try and populate the records.  Unknown values were used when there was no other information available.</procdesc>
+				<procdate>20100801</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>Future Trails Added:  The old RLIS regional planned trails data was incorporated into the new NRPA GIS database.  Now all of the trails are maintained in the same database.</procdesc>
+				<procdate>20110201</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>TRAILID field changed from a string to an interger and re-populated in increments of one.</procdesc>
+				<procdate>20140801</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>Added field MTSCOTTLP:  Field to flag if a segment is part of the Mount Scott Loop.</procdesc>
+				<procdate>20150331</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>LAST_EDIT field has now been included in the data set.  This field will provide a timestamp of when a segment was last edited.</procdesc>
+				<procdate>20150507</procdate>
+			</procstep>
+		</lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>Line</sdtstype>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<gridsys>
+					<gridsysn>NAD_1983_HARN_StatePlane_Oregon_North_FIPS_3601</gridsysn>
+					<spcs>
+						<spcszone>5076</spcszone>
+					</spcs>
+				</gridsys>
+				<planci>
+					<plance></plance>
+					<plandu>International foot</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>D_North_American_1983_HARN</horizdn>
+				<ellips></ellips>
+				<semiaxis></semiaxis>
+				<denflat></denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>Trails.dbf</enttypl>
+				<enttypd>Attributes and descriptions associated with trails</enttypd>
+				<enttypds></enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>TrailID</attrlabl>
+				<attrdef>Trail ID - Unique identification number for each trail segment.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>TrailName</attrlabl>
+				<attrdef>Trail Name - Proper name of the trail or trail segment. No abbreviations. Access, connector, and spur trail names should use the same name as the main trail, appended with the appropriate suffix, e.g., Springwater Corridor - connector. Adjacent street names may be used for trail segments in road rights-of-way.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SystemName</attrlabl>
+				<attrdef>System Name - Name of the regional trail if the segment is part of the regional trails and greenways system plan.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SharedName</attrlabl>
+				<attrdef>Shared Name - Other name that the trail or trail segment is know by when the trail/segment is part of more than one route</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SystemType</attrlabl>
+				<attrdef>Functional Class - Hierarchical classification by purpose and function.  This is analogous to a roadway classification system (interstate highways, arterials, collectors, local streets).</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>Local</edomv>
+						<edomvd>Sometimes called Local Access Trails or Neighborhood Trails, these provide connections to local features such as parks, community centers, and schools, and include most paths within parks, natural areas, planned developments, and campuses, as well as public stairways, alleys, and narrow ROWs.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Community</edomv>
+						<edomvd>Also known as Community Connector Trails, these are typically much longer than Local trails though not as long as Regional trails. Community Trails link important land uses and areas of interest within a single jurisdiction. Examples are Tigard's Pathfinder-Genesis Trail, Portland's Columbia Blvd Trail, or Gresham's Butler Creek Greenway.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Regional</edomv>
+						<edomvd>Regional trails tend to be multi-jurisdictional, exceptionally long, and connect to regionally significant features such as Forest Park or the Tualatin River. Examples are the Gresham-Fairview Trail, Hillsdale to Lake Oswego Trail, or the Wildwood Trail.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>State</edomv>
+						<edomvd>Also known as Inter-regional Trails, State trails connect to destinations outside the region, e.g., Banks-Vernonia Trail or Willamette River Water Trail.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>National</edomv>
+						<edomvd>Inter-state trails, e.g. Pacific Crest Trail or Columbia River Water Trail.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Other</edomv>
+						<edomvd>The Other value is reserved for GIS trail features that do not exist on the ground but serve to connect trail segments to the GIS routable streets network.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>County</attrlabl>
+				<attrdef>County - County where the majority of the trail or trail segment physically resides. Use proper county or parish name.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Status</attrlabl>
+				<attrdef>Status - Current physical state of the trail</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>Conceptual</edomv>
+						<edomvd>The alignment of the trail has not been determined through a master plan or schematic design process.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Decommissioned</edomv>
+						<edomvd>Trail has been removed from service</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Open</edomv>
+						<edomvd>Trail is open to the public, free of charge</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Open_Fee</edomv>
+						<edomvd>Trail is open to the public, access fee is charged</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Planned</edomv>
+						<edomvd>The alignment of the trail has been determined and adopted through a master plan process.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Restricted_Private</edomv>
+						<edomvd>Trail exists but is privately owned and may not be open to the public</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Unknown</edomv>
+						<edomvd>Status of the trail unknown</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Under Construction</edomv>
+						<edomvd>Trail is currently under construction.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>TrlSurface</attrlabl>
+				<attrdef>Trail Surface - The predominant surface type the user would expect to encounter on the trail</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>Chunk Wood</edomv>
+						<edomvd>Shredded/chipped wood or bark</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Decking</edomv>
+						<edomvd>Boardwalks, recycled material, etc.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Hard Surface</edomv>
+						<edomvd>Asphalt, concrete, or similar</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Imported Material</edomv>
+						<edomvd>Imported aggregates, clay, gravel, crushed rock, shell, sand, etc</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Native Material</edomv>
+						<edomvd>Existing earth</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Stairs</edomv>
+						<edomvd>Stairs or steps.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Water</edomv>
+						<edomvd>Water</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Unknown</edomv>
+						<edomvd>Unknown</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Width</attrlabl>
+				<attrdef>Width - Average width range (e.g. 1-4, 5-9) of the trail or segment in feet. Does not include the trail shoulder. Future trails have null value.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>1-5 feet</edomv>
+						<edomvd>Width of trail is 1-5 feet</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>6-9 feet</edomv>
+						<edomvd>Width of trail is 6-9 feet</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>10-14 feet</edomv>
+						<edomvd>Width of trail is 10-14 feet</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Unknown</edomv>
+						<edomvd>Width of trail is unknown</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>15+ feet</edomv>
+						<edomvd>Width of trail is 15 feet or greater</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Accessible</attrlabl>
+				<attrdef>Accessibility Status - Accessibility guideline compliance status for trail or segment that are designed for pedestrian use</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>Accessible</edomv>
+						<edomvd>Trail meets current accessibility guidelines (ADA and Access Board Interpretation/Guidelines)</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Not Accessible</edomv>
+						<edomvd>Trail does not meet accessibility guidelines</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Not Evaluated</edomv>
+						<edomvd>Trail not evaluated for accessibility</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Hike</attrlabl>
+				<attrdef>Mode: Pedestrian - Hiking, walking, running modes of travel are permitted and appropriate considering the design, character and management of the trail segment</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>N/A</edomv>
+						<edomvd>Not designed for pedestrian use</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>No</edomv>
+						<edomvd>Not permitted</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Yes</edomv>
+						<edomvd>Permitted</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>UKN</edomv>
+						<edomvd>Unknown</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>RoadBike</attrlabl>
+				<attrdef>Mode: Road Bike - Bicycling modes of travel are permitted and appropriate considering the design, character and management of the trail segment. (Could include electric bike or Segway type transport)</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>N/A</edomv>
+						<edomvd>Not designed for road bikes, i.e., not paved.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>No</edomv>
+						<edomvd>Not appropriate</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Yes</edomv>
+						<edomvd>Appropriate</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>UKN</edomv>
+						<edomvd>Unknown</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>MtnBike</attrlabl>
+				<attrdef>Mode: Mountain Bike - Mountain bicycle modes of travel are permitted and appropriate considering the design, character and management of the trail segment</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>N/A</edomv>
+						<edomvd>Not designed for mountain bikes, i.e., paved.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>No</edomv>
+						<edomvd>Not appropriate</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Yes</edomv>
+						<edomvd>Appropriate</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>UKN</edomv>
+						<edomvd>Unknown</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Equestrian</attrlabl>
+				<attrdef><![CDATA[Mode: Equestrian - Equestrian, pack & saddle modes of travel are permitted and appropriate considering the design, character and management of the trail segment]]></attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>N/A</edomv>
+						<edomvd>Not designed for horses, i.e., paved and/or too narrow.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>No</edomv>
+						<edomvd>Not permitted</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Yes</edomv>
+						<edomvd>Permitted</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>UKN</edomv>
+						<edomvd>Unknown</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Nonmotorized Watercraft</attrlabl>
+				<attrdef>Mode: Motorized Watercraft - Non-motorized watercraft are permitted and appropriate considering the design, character and management of the trail segment</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>N/A</edomv>
+						<edomvd>Not designed for watercraft use.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>No</edomv>
+						<edomvd>Not permitted</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Yes</edomv>
+						<edomvd>Permitted</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>On Street Bike</attrlabl>
+				<attrdef>On Street Bike - Designed to indicate if a bike use trail follows the path of a street or is one on the street.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>N/A</edomv>
+						<edomvd>Mode: Road Bike equals N/A or No. Includes segments that are not designed for or do not allow bikes.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>No</edomv>
+						<edomvd>Bikes use a separated facility, either within road right of way, or in separate right of way. This includes two-way paths at least 8 feet wide running parallel to streets in the same right of way, a.k.a., sidepaths. Separation between bikes and car travel lanes should include grade separation, such as curbs, and a planting strip.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Yes</edomv>
+						<edomvd>Bikes share the street or road with cars. Not limited to public right-of-way. This could include several facility types, including bike lanes, bike boulevards, shared roadways, sharrows, signed connections, or cycletracks. Does not include sidewalks or sidepaths that are shared with pedestrians.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>AgencyName</attrlabl>
+				<attrdef>Managing Agency - Organization with legal right to control or regulate the access to and use of the trail</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>AgencyType</attrlabl>
+				<attrdef>Agency Type - Type of managing organization</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>County</edomv>
+						<edomvd>Managed by county government or agency</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Federal</edomv>
+						<edomvd>Managed by federal government or agency</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Municipal</edomv>
+						<edomvd>Managed by municipal government or agency</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Park District</edomv>
+						<edomvd>Managed by a special park district, e.g., THPRD</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Private - HOA</edomv>
+						<edomvd>Managed by a private home owner association</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Private - NP</edomv>
+						<edomvd>Trail managed by private non-profit organization, for example a land trust, conservancy, etc</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Private - other</edomv>
+						<edomvd>Managed by a private individual, business or commercial entity</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>School District</edomv>
+						<edomvd>Managed by a school district</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Special District</edomv>
+						<edomvd>Managed by a special district government, e.g., Metro, Clean Water Services</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>State</edomv>
+						<edomvd>Managed by state government or agency</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Unknown</edomv>
+						<edomvd>Managing agency unknown</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Last_Edit</attrlabl>
+				<attrdef>Date of the last time the feature has been edited, including attribute or geometry changes.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Regplan</attrlabl>
+				<attrdef>Flag to indicate if the segment is part of a regional trail system.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Milage</attrlabl>
+				<attrdef>Length of segment in miles.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Wilrivgnwy</attrlabl>
+				<attrdef>Flag to indicate if segment is part of the Willamette River Greenway.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Fortymloop</attrlabl>
+				<attrdef>Flag to indicate if the segment is part of the 40-mile loop</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Metro Data Resource Center</cntorg>
+				</cntorgp>
+				<cntaddr>
+					<addrtype></addrtype>
+					<address>600 NE Grand Ave.</address>
+					<city>Portland</city>
+					<state>OR</state>
+					<postal>97232</postal>
+				</cntaddr>
+				<cntvoice>503 797-1742</cntvoice>
+				<cntfax>503 797-1909</cntfax>
+				<cntemail>drc@oregonmetro.gov</cntemail>
+			</cntinfo>
+		</distrib>
+		<distliab>The information in this file was derived from digital databases on Metro's GIS. Care was taken in the creation of this file. Metro cannot accept any responsibility for errors, omissions, or positional accuracy. There are no warranties, expressed or implied.</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname>Shapefile</formname>
+					<transize>6</transize>
+				</digtinfo>
+				<digtopt>
+					<offoptn>
+						<offmedia>DVD or CD-ROM</offmedia>
+						<recfmt>ISO9660</recfmt>
+					</offoptn>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>http://www.oregonmetro.gov/rlisdiscovery</networkr>
+							</networka>
+						</computer>
+						<accinstr>Email drc@oregonmetro.gov or call 503-797-1742 for further instructions.</accinstr>
+					</onlinopt>
+				</digtopt>
+			</digform>
+			<fees>No cost</fees>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd>20160428</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Metro Data Resource Center</cntorg>
+					<cntper>Jeremy Murray</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>600 NE Grand Ave.</address>
+					<city>Portland</city>
+					<state>OR</state>
+					<postal>97232</postal>
+				</cntaddr>
+				<cntvoice>503-813-7561</cntvoice>
+				<cntfax>503-797-1909</cntfax>
+				<cntemail>jeremy.murray@oregonmetro.gov</cntemail>
+			</cntinfo>
+		</metc>
+		<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+	</metainfo>
+	<Binary>
+		<Thumbnail>
+			<Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAC5APoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDq7q6FqI/3UkrSPsVY8ZJwT3IHQGohezscLpt2T7GM/wDs9Jff8fFh/wBfB/8ARb1v2HiK6sYxGIoZEH+ztP5irjG6uZynZ2MdW1BlDLomokHoQqf/ABVNeW+jGX0bUFB7sqD/ANmrsYvF9u2BLayoe5UhhV+HxHpcwH+keWT2kUj/AOtRy+Q1JPqedG+mBwdNugfQtH/8XR9vl/6B11/31F/8XXp0d/p1xJtS5t3c9twyala3tZ/vQwyY9VBxS07D16M8tW+lZgP7PuRk4yWix/6HUk89zbsA+nznIyCksLA/iHr0s6bYsSTZwHIwf3Y6Vz+tWuk6YUMdnHJM5x5XmsMe5AppRbE3JK5x/wBum/6B11/31F/8XR9um/6B11/31F/8XWpqFnLbS75IUgEnzLCJAxUe46/nVOq5EZurJFf7dN/0Drr/AL6i/wDi6Pt03/QOuv8AvqL/AOLqxRmn7NC9rIr/AG6b/oHXX/fUX/xdRvqksZx/ZN+3Gcr5R/8AZ6t5HqKcVIGSpA9SKPZoPayMxte2fe0vUVz6xqP/AGanLrhfBXStSIPT92n/AMVWiqu3KqxB9ATV6DRdSuSNlpIAf4nG0frS5F3K9q3sjGj1KaTP/Eqvlx/f8of+z077dN/0Drr/AL6i/wDi66A+HZ47yK1luIklkTcnXBweQD645ro4fDWlxYzAZD6u5NS1FDTmzzz7fL/0Drr/AL6i/wDi6Pt03/QOuv8AvqL/AOLr01bCz81ovssJRY1UAoDjrVebw5pcwP8Ao3lk942Ipe6V755tNqrW6b5NPuwucZBjP/s9WrSW7vp1ht9MuXdhkDfEBjr1311eo+DLee1kS2nkVivAk5BP9K5/wbc/ZtaW0ul2zRlocN1U/wD6xj8RS05rBeVtSb+x9a/6A8//AH+h/wDi6P7H1r/oDz/9/of/AIuvQ6KRZ5pNZ6vC+1tCvyfVDGw/MPULpqcbYbQtRB/3U/8Aiq9Rop6C1PJft02SP7Nusj/ai/8Ai6Pt03/QOuv++ov/AIuvSr7RLG/y0kIWQ/8ALROD/wDX/GuS1fQ5tKCyeYJYWbaGAwR9apKLM5OaML7dN/0Drr/vqL/4uj7dN/0Drr/vqL/4urFFX7NEe1kVF1UfbobSWzuYXmzsZwhU4BPUMfStCqF0AbzTzjkTtj/v09X6zkrOxtCXMrlS8tby8ubCGwVGuTOSqucAgRuT+lVlv5be9ey1CNIZo3KMysNqkdjzx9cmr5hv7jUdPi0ydILppmCyN0UeVJnse1dZpngjTLWzdL+NdQuZW3STyjnPP3ecjqe+SeaybqKS5H/l/mbxVFwftFr0tv8A5W8vyOO+1Wp/5e7f/v6v+NW4LSa6g8+2UTRc/PGwYcdeldoPCmggAf2VanHqmT+dXLC0t7HzLe1hSGFcbURcAZ5NaRqT+1b8TGdKl9i/zt+h57LbzQqrSxMit0LDg0+0vriyZmtZjGWGDtxzXoNzbwzSRo8YYOTu9wB/jiopNHspUKPECp9AB/Sr9p3Rl7LszjH1zU3Xab2THtgfyFUN7GTduYyE5znnNdZd6TZ2f3bZH2kYyOoPr+VXtLgs2iyIFikXupK8HoRzUfWKanydSvYTceZvQ4n7PO0iKY3DyDKBuC4HpnrV6wstNkfF9q9nCcZ8tLhC2Pc5wK6HW/CGl66yyXKyrMqbFkR+gznocg8+1VYPA+gxRrbzWjSPtwJmlYF/UnBwD9BSlUqX91I0hRo2vNu/ov8AM0ofDulJtdYPMGOCzlgff0q4NMsA24WcGcAf6sVyz+ATaMZNG1i8s5CAMMcgj0+Xaf50hi8baOh2XFrqcCAY8wYc/wAv5mo9pP7Sf5mvsab+CS+en+a/E62KO2BaOKOIbT8wVQMGpiqkYKgj0IrjYPHCWDRW2r6Td2LD5S5G5fr2J59M9a6Kw17StUfZZ38MsmM+WGw+P908041IydkxSozgrtafh960NAAKMAAD0FLRRVGZG9vDJNHM8atJHnYxHK59KkoooA5fVdS8RW2sXEWmaZby2yoh8yWQAucc4G4fyqqPHFzZsF1fQrq39XiO9f1wPTvXVqitczblU/d6j2qQwxEYMaY/3RUOMr3TNY1I2tKKf3p/18jBsfG2g37iMXggkP8ADcDZz6Z6Z/GsLxpo8ltdx65YEhmI8wLnk9jx6/0+ldRfeG9J1KLZdWaOckhx8rDPuOa5+58F6jYxsNC1eVYz1trk7kb26Y/T8al863V/Tf8Ar5jcaU/hdn56r71/kWdH8dafdRrHfyC3nAwXYfIx+vaumgvLW6/497mGXjP7uQN/KvLbiOOC6FtrmnHT52Hyz43RMfqOQPcE474plxpVzpax6pYBh5bb0mibzEIHHDDt7Z6ZqlJtXWtvk/uMpwlBpSW/XdfeeuUVQ0zU49U0eK/h48yPJX+6w6j8DVyEYgjH+yP5VYh9MliSaJopFDIwwQe4p9VNSuDa6dPKuNwXC/7x4H6mhCZwF5AsF1IsYYwb2EbsPvAHHXvVeu0ureC5sU0q2gSeaFQu8/dhOOST6+wrE1jQH0yBJ0lMsZIV8jBU/wCFbqSOeUGtUc5c/wDH3p//AF3P/ot6v1Quf+PvT/8Aruf/AEW9X6znua0vhH2V0lp4h0eRwSGuWTggYJhk9a7JdbsLzU5LBJt8sI/eRIwJz+B5x3xnHevM/EFvcXUNnFbQmaQ3GdgUtkCN88D2qeyj0GKzihluL7S9WiYyLdPCQM+gVSSB+XXqcmuadVxla34/1+Z3UsOqkOa7v5K/z3vb0R6utvbsAQisD0zyKijtoftE3yenc+lcX4e8bW32eW21m9YSpKdk8cTAOuOpwOOc9hW5p3iPRr6VhFqbRvJLtjWU7C5wOgbrVRqwlazM54erC94vTrZ2/I2I7dC8jIWQq+FIbOOBng8VNi4H8UTfgV/xohR4xsb5gOd/r9fepCQASTgDqTWhiV7u1S9tSkmUbHDA8qfrXE3On6habSkkksYGQUJ4+o6/0rqtU1/S9PtpDcX8KsVOEVtzHjjAHNcbZ6tc/wDH5a7zbzMzqjIShGT2P9KcVFtrQmopJKWtu5rWfiqaCERzRCQqMbu9St4uLxlWsRuzwRL0/Ssp9VjnIM9hbv6leD+fNNN9aj7mmwg9tzE/0q401HZfiZOo31/A14PFVw52i23nOODkAe9a6yXckZEpyxTLKCMKDntwTxjvXKQ63dQhAiQrtbIYJyP1x3rctNQt7y1ILx+co2lWXBIHTse3/wCulKNuhcJX3ZswOt7bmO4hB+Ub1YBlbqP6GsXVfBOl3qNJZxCxvF+aOWDKgN2yB/TB962LEESynbhSqkc555z3PertZSipKzRtCcoO8XY5Pw7r11FfPoOuuBqMZxDKRgTr7Huf5j3BrrKxvEPh631+zCOfKuY/mgnX7yH/AA//AF9ay9B166N6NC10+TqMJ+SToLkDpg9M/wA/zAlNxfLL5f13/M0lFTXPD5r9V5fl6WOtqH7VD/f/AENPaaJDhpEU+hYCoJHSViIZmZ8dI24Hua0MRI5HknmMIQj5eWJGOPTFS/6T/wBMv1qISSQEhxGXY7idx/8AifamnUUVipeAEdQZD/8AE0AWN0//ADzj/wC/h/wqWqSXom3bZI0UHG5SWz9OKcJYm6Xx/Nf8KAH3lja6hbmC7gjmiP8AC65wemR6H3FcXb2beFfG9vY2jM2m6mrZhY5CkA/y457g85xXTapq1vpFi97Ld+YifwZUlj2AwOpNedh9f17xTFcII0uXh3RAN/x7xtwCfTAOfU7gfTGNVpNW3/r+v+GOijdQk5fD+vT7t79vWxsaTfJpPiTVdNsUkutPYklYgSYzwDj6ZI/Cutg1n7Um20tJp5FHzEjYoP1NJoXh+00G1McOZJn5lmf7zn+g9qvwFkYxOACMsMHPBJrWCtGzOZ3bKsn9rT48v7Naqeu7MjD+QqrcaVqMsySNqCTBDlVkiwFb+9gHkjtmtuiquLluQ2tslpbpCnRepPVj3J9yakkjSWNo5FDIwwVI4Ip1FIo848R6M+l6jp7pl7Z7htrf3T5b8Goa6fxr/wAeWnf9fo/9FSVzFNu4kktizpRK+I9KIUsfOfgf9cZK7e4WwvB5d5BE+052zxggfnxXE6P/AMjLpX/XaT/0TJXeMsySO6KjqxGQTg4xikM5qbwFoV5JMRHNEPMBAil4HAOADkAc07/hBNCe3ezNvICApE4f94fx6dumMe1aUF9pbXtxayTQRXIf/VGUBjx6A+xrS+zIDlWkU4xnzCePxrNU6b1SRs69ZaOT+9nLf8K/tYz/AKLqupW6n7wSUc/kBTB4DkcmKfX7+azZstAzH5vqSSP0rrBCwzieX6cH+YoaKbaQlwwOOCyg4/lR7KHb+vvD6xV7/l/kY9j4M0GwkDx2CyMDkGZi4H4HipkY7JmtAQmCP3Y78kcevI/Kuf1Gz8WaNZT3y+IEuIoULOskSg4HoNpGfyrX8M6lLcaRbPKhllmQOzJgZOBnjjHT9aINJ8qVgqqTXO5c3Tr+pHJaW16TC8C+cxxnowOM8NjP55zzWW/hu4UIfPiO8bhweB75rqpZop5otxKINwYsuOR2z2/i6VX1WS3srIbFLlzlULMVOOSev41spNHO4Re5hLoRa4jNoWKxnMjnDEEdCF71vvbi6IFxbM5wQW8tRnp69utZ41K/xbiGFdsuGHlx4J5GQck44z/Ota7jTzCXml+f+BW4HHXHX8vWk5NgopbBp9qlq8qJjBCkgEkA5ar9ZmnwRyNO5IcMwIxkY+UDBGevFW5LaIROQnIU9zSKLFYniTw+mu2a7HEN7Awe3mxyrDnBPXGfyODWrBEiojDcDtH8Rx+VTUmlJWZUZOL5lucNZeK7nQFOn+INPmE6AYuIFBE3uegJ9x+QrattQTWoUvrczxW7gqolRlOQSD04/HNb+BnPeilGMlu7lTlGW0bP8Pu/4JjCJtxxd8DtlutRpZPNueN4pDn7wkya1Fm2Szgo5G8HIHH3RVGa9toncrMFlTGxMgtjuCPSqMyKa3lgA8zA3dCDmnpYSzWyupUnsCSORVn+2LdVzICpHXBDY/I02HV4WhT7zNgbicAZ70AUp9KtrtVi1BfOhL5kQhivGcZPfnHFUfBY+1zatqzctcXJRD6IvIGO3BH5CtiHV7NIlimkVGxhsnv39/WsHwXIlhqOr6SsyPBFKJIm3DkHj+QWol8SHfSx2dRH/j6XHUId3sO38jTmmiUgNIgJGcFh0pkbpJcyFGDDYvIOe7VYiaiiigAooooA5nxr/wAeWnf9fo/9FSVzFdP41/48tO/6/R/6KkrmKAIZLe8udQ0+LT7k21157FJQM4xE/Hfr9DWn/bPifRJf+JxBJdWuTmeFMYGevGOPqBUeksF8SaUWIA85+T/1xkrvHljNxFiReAxPzfSolFt3TsaQqJKzimvx+/8A4c8u0DRLPV9JuLia0urmZ5ynnQyklMAHp0JySTnrWvZS+KvD6fZra2+32KfcWZdjqPTrkfrXb20tvGjhZIlzI3yggd8VY82P/non/fQqVRSStv3NJYmUpO+q7PW3p2+Vjjx4t12H57rwxP5WM7oXL4/IEVND8QdK8zy7yC7snzjEsWf5c/pXSzRxfJIqqHZ1+Ze/Pr9KWWKG6Z4J4Y5YwoOHUMDnOev0p8s1tL71/wAMTz03vD7m/wBbmLq19ba94bvINJvLa4mmi2qnmAHBPIweQcZ60ujWtnZ6PaRSyK7xRpnaCDuA/WoNQ8D6BPG8gtWt2VScwuRj8DkfpWSPBM0Mix2OuXETFSVG84A4yMAj1/Sl76d2vx/zK/duPKpWW+q/VP8AQ6a28s6gWLJ/rHdTkc5yP6Gl1O0t5XiRok+bcT26Y5rDs9E1uMBr3Uorm32hFATDIeBnJ6/mc1uJp12JEZ7uNVXG0CMH8s9KqEpO/MrGU4xjs7j7bTDFbjDhSV53ru2/nTECw52XAudgwyKmRn3wcfnSzsA7IXM2eR5zAjPXAUdcio2lO0Kfuj+A8Ajrwg65U55qyB8F1c73aKzHlZCgpg4wPTIq35pl/dNcIjMMbTGVb9TVeF5EjeIyKCxOCcggAAZ4/CnbZDtiaNJkbHzOWYZ59enT9aAHNLJHcxW4uB/dOUHpx3qdzPEoIdH+YDlcdTj1qm+lSFhLFcGKVSCASZFOOnXn9aZPb6kwxJNAy7l5G4dx26fzoA0S8yKWdYQB1YyEDH5VU+3zzvstbcPx/rCTsH6DNFvp8S3BM7vPKoDYf7i5z0HTPBq0roksxd1X5gOTjjaP8aAKwsJCd0/lztnJDkhfwHT9KU2VnIQk1pHG3bbwD9CMVZ+1Q/8APQH6DNNlubfymMmTGB8xKEj+VACpaW8bErCgz/sjilNrC0ocxoeMYKiqMTKrjbLKIlXDbQ/3s9OlTcuomE00cIGWZzjP+FAET20bJOzRRFFJVRs6ZPJrmPFui3FpqDa5Y+T5e0CZHYLyMcjPB6Dj26HNdC08iW5mguNyuxOxiCe59OOAKyNZ0uLXLi1l1G7k+zWjMz2/AEnOM7sDGB+memamWquiopXtLYsaPPZ6tpy6iF+xozYZVJBJAwQMHpnJFacaWIYpDeSxsxycSEc/jxXK3ljqvheAm2QXmkBt4Uj54QTz0/nyPp1rZ0TV9OurcqJIpVc7ip5df95euPfpXO6tRSSei/r8C1GLXma2GDBY9T5Y4UMFbmpduoLnElu/puUr/LNTR29upDxwxA9mVRUtdKv1M3boVPOvVzm0RvTZL/iKPtrDO+0uF9wob+VW6KYjkvF93FPa6ci7w32zOGQj/llJXP10/jX/AI8tO/6/R/6KkrmKALGlkDxFpeVLDzn4Az/yxkrvFkgcAiBtp7+V/hXn1m7x63pjx/eWZz/5Ceu6hu3Xy41j3oABnofbr1oAntZI2jKAEfM+AVI/iPrU3lR/880/75FUWWHykleMktMw2nqSSf8A9f4VHOVgkIaNMupIXzDkYH8zQBbuLeHMZ8mPmQZ+UVL9mg/54oPcKAazZTIwZs/dAwPMf72eKdI8qqcSsp2sQFYtzzjr9DQBcmtk+zyBd4+U4Ac46emaFZGKiNEjkYbgGHO31wK5Lxjf3Ntofkw3E3mXUogVlYjHc8jHPGK6TT9PmtLaKN7iRpY0AaQkNvOBk8jPapUrtopwaipd/wBB6MUtoVef7yDC+VkHoO31FJPIyQrG7LuWTbuJxwFznvUwtAyKjTFgmBwq9vXj6VTuXRJXV2llCvuJG0AfLgjOOvtRKSirsSTewPGYY0I2RE/KEB29Oh3dT6fjSRQyMMxKRGQCCBsHqOepHJFSTAgYxNIBiRCXwNoxnpUjG1jjO63YbeGXHA/xqhEEEEG1183JDMB5ak8fhVuB3ig2CCVtpOM4HGTj9KozEpHMIi0ahm5EjD2p8s8b+SlvcM8hzuAmPp+NAFz7SxjD/u41PdmJx9QP8ahvGkiaLdKxG7J27Vx+f1qtdQlLeIM8rF1ZmwT1PP8AWiVm+8Xn5cLuJI29fbtQBJAhluUMjltwOASfu9eD3A+X8a0khiQ5SNFPqBzVK0jLXGWkjJjzkKQSx6ZPf1rQoAKjni8+B4ixUMMZAB/nVa4u5FcpCEOO7AnJ9BioJZrmbbtXaQMMF3nkgHqB/nNAFmRYra3cNI2WbfnAJznPAA9arzBxYOTuDoMhc/dHXJx+NQRwypsMcYLOc4aQEge39TT1SbZcJJCC7LwFYYXA/PqT19KTXMrMadncrOHWAh9mXYsCGXn5SPWsXxZaXF/o8MNlA85lnHmFMMqjLEZ9un51088rOgCW5VvmOdw4yMZ/NgaajliU3Th0PyAYw2eeu3jpWapJU/Z3LjVcaiqW2dziNAn1GfSo9N0OdYYTl7qSSUGaFyfmCjjCkAbSB3PIOaF0KbR5RqWlt50kA3eVMoII6HkdCef1qre6adc8YypYQi2WF/MnuEkyeoJboMNngAdTye9ehTWzGPKxqJVQ+ZGOjg85HvmuaUJz96L+H8fT8n+B0VFGL1+1r5q/9XX4oTw/qdtqunefbFwA214n6xN3WtWuL8LlU8R6vIrhIgI1cE4y3PP16/rXaV00Zc1NO1jlmrSaGs4UqD/EcD8if6U6oZ2CNCTnG/sCf4T6Uvnp/dk/79t/hWpJz3jX/jy07/r9H/oqSuYro/GU0clppyqTn7Z0II/5ZSVzlADrWTyta0xsZ/fsMZxn909dpADKqO8kcSMMcv8AN8uBkdPQ/nXHWLbNc01iEIEkhw/Q/uZK7a2BgCqs9ucAgAkjqSaj3ufyK0t5ksKFxGNyPD5jkd+57k896ddQxpbNsiQEkLwvPJANV1uJAP4SY3Z+FY5Bz6duaV55HilLCIqHQk7ycfd46e1WSRFd7yjc+0AF+vXPTn8elNMe6Z0kZlY4H8IbBPJJAzjHfOafJvLFldHZieEkBAyQcfdz2FSHz553ZYk24B4fr+PpigDkPGjyxx6QxfJF0DtIBycDkjHJ6/nXZpbuymSG+mYdgcH+lcd4yYyf2QmzZIb1QjZ5x7fjXZWsUuyRfN2gSN0ALfn0/SseRSnK/l+RvJtU4W8/zRRgu7mOKSbYjGV9pO7BDdBx+VSKLmDbDKkbCZ/ny2S2eCRjpjFWxplqFxsY5OSd55P+TTk0+CKQvGZFYjHDk/zrONGatd7f0+nUlzi+hTNlP9nxby5XLKFY4wM44PuKifz4jMrF3utm8FTwO2Px4Gcda1FtQihVllAH+1UJs1klkEjSEZVgTgjp7jr1reNNRd1/wPuIcm1ZjLF1NnGXt3LHJJ2g9zUu7dcxBYdnJOehxg9vriltoSsOFmcKGYAAL03H2qTyG3FhPJuIAzhe2fb3qySK9gkmMflgHB5ycdx/hUHlSRq6+SDlicJHwec9c5q55c3/AD3/APHBUb2kkj7zcHOMfdFAFVP3ELSQpKhUtkbBtYAng1bvS5tvkbZkjJOenvUE1myQSMWhY7TnMPJJz3z70tx5DIxuLrIHGEOMZ9qTaSuxpX0KXmss4CeYSR8u3HUEYHQcZ/ma0FClmaQTjfgsoQ4Jxjt9Kz9MUz3e5y7JGvBJ9xjP5VuVnSqe0jzWKnHldjLikt2Ty2iUEJw7LjueMkfT86RJEtpTIsQZVTGQU4/EVHMAL8ws/wAoYYGQODz+n9KfGYgd6FHSRNwMjDCt+VaNpbkDrqaSaII0EJ3sQmWyQckent+tNCSiOUJtUBdpO0jaT1OAoz2qEwxruuFkDgSDcrPwRke3TmpDGpUF1UHbgkLxzj0ShNtajehyejStoet3unTQRxTyv56uWBEq5OAvHbJx75rtYXYzMyhiF55bcSp6/ToDj61zMnha6vdSjv8AVr+NYIJt0EcSEHbkHHPQkqMjn/Dobi9jtoZrt/MHlgyMMkAIo7j1OPryKxowlC6e3S5viJxm1Jb219f+GOY8MRm11fWbCdpJL0yE5Y53KT978iT+NdvbszW8bMckqOfX3rk/DVnNf3kmv3+DJfBljiA4WMYx/IflnvXVwEmL5jkhmXP0JFaU/hMHuEp/fQj/AGif0P8AjUtQyf8AHzD/AMC/lU1WI5nxr/x5ad/1+j/0VJXMV0/jX/jy07/r9H/oqSuYoAW3lMGsadINmVlc/P0/1UldpEERkbz1CkBchwcj1Yd65DTyBr+l7n2AzOM4z/yykruUmVERVuw3GBuTOfyoArRx280ACqzMDzjJU8+g6f8A16hDGK48kIUaPBLCQ4IPTgjrz/OpYWR4wJGjyRuG4fjwSwwacsuFtpDOkh6FWYbh36/h3/OgBAJPtA2YYAqSGbp8wAxxUltOqoY5YWcuQcAZGPlxycetSTTWk/lyiVC8brj5hkfMM5/KmqIlyRMG2uijkYx8nP6UAch4lDT3nh6FVG5roHI7YKAD9c9e9dzbsBES2FLO3U99xrjPEDH+3PDe7aALzGQwPQxqf5V2EYE1sCj4cMzAqQcEk/41nH4pfL8jap/Dh8/zLVFRwHNvGck/IOT1PFNuxm0l9kJGPXFaGJNUAvLc/wDLQenQ1UCSiUsZJCuPuFZBjp7/AOc1FHv2Qff+8f8Anp6GgDRtf+PZPx/nU1QWefskeeuO9TAgkgHocH2oAWikJABJ6CoxcQFN4mQr67h/nuKAG3mPskmemKoIo+SBDlWbOTCSQeDjJP1/Krd1LFLZThJUbCEna2f5VVzdIsQRHZAQwDDknHqB0yetAC/Z9hKTYj2pwy5OeMZJ9ic0jbFldQPmD4X94RxkHpU0sUt4wJSNRGSv3zz09unFReVcF2h8tTtYMGzwo4z788/rQAsNxC0ztLHukY8FBuBHA61Rup4JLh3VR8yL8pH3eh/DjPNTvEqx7XUREuy7jgoDjj3HOOelJcC2jhnllmhhiQjL4VCeMjBOBnNZVoOcLIuErSuySWIoXEZiIQbgOTxnIAHTjj86daTRSah5LSr5sak+UTgg4HO3oOv6+9ZXh7xVY6/a3UMMcscyxNJ+8UfOvrkehIBFaP8Awi+mf8JB/bXlyfa87vvnbu27d2PXHHp7ValdJxBw5W1PRlu73/aVYReZsXKjeRgk4z0/yM1QntF1Cwu7cjbPcQsgwc4BUY+g/TrV+8JW5jYZBA7n5cZGc8e/rQimG7QvIGd+GC/KB7n8fX1qiDl/DurT6XcwaHrSGCWM7baRgArqeAufr0P4devYRDZNLGOnDj8c5/lWB4vsEu9CvTtBltwLiN+6/wB4A/QGr+hXKarodpcsSZNm1mBIII68iojo+Ub7mhJ/x8w/RjUqsHGR0yR+RxVSKKUt81w29MjBUHgn/wCtT/KnjACTZyxJyg4ycmrEYXjX/jy07/r9H/oqSuYroPF/m+RZB5Nyregfdxz5Mhrn6AJdO/5GTRv+vlv/AETJXY7rjyVYOAEXaB/2zz6VxliAfEOjgpvH2lvl45/cyetd1MsKSR7rMKoyx+VOwx6+9AEtkNpkQZwhCD8On6YqZv8Aj6j/ANxv5rVWGKG4ebbGYwCMAcY49qmSxhQ5O9zjA3HpQAgQGF5BlXVnww/3jUMriOzc3EUa5Q4kVeMkd/SpIbSFo8lTwzDqeeT1qVrSMqFXcq55UMcEemM0Acf4sEcfiHQJSMRfa1BIXjqn+fwrpjFHJYYRI/MDhcleh3VzPjOx0+O0DyR3u8S4t47T/noVzz6Dj6+lX/CjanceFrdrlpGl8xiDOCHwGOOvUfWsou1Rrv8A8MbyV6MZdrr9S8RGAVxtCDaJPKBzye34U5Y41VlZVcqvGIsYyf8APekMhZ1XYFBBySCR1PX35/nQ6IB+8AUDO0YIz83cY568VqYFgwbLQM6hjuBLBjnaTngevap/JtAIwVC7jhA2Qc+wplxPGlkU8xBJhV25Gc8cVTRmLpGm5nJXOSAwGMjnt/8AroAtWxt/s6BTMSqjIQuQDj2qLeJcCMvCW+Ykysc4A/xFVXliVc4jdxGhAIzk/IMZ/CoY53a4RCqbCQMYyV46jpz0H0rKVaEZqD3Zag3FyWyLiyE8SzOG2vuAdsDGMfz/AFp7wKZoeWbATceMjPTnr1xSLI8KsofIySyjbnBAA+nQ1XkWVIQxZlmVdxLHgY6dfrxWknZNkpXdjTuLOOSFt7yNgEj5qinaS3s43Sd8nAGdpA4+lU4LqXLk3DyosRLqVxgnoB9a0JpAqQICAwIOXBAwBnOamE1OPMhyjyuzIrMySSOpmkHJY/KOefpUssMguYylw4cggkgEY9xgUscC21qzpIx2x/KfvADrx61CkHnXuZJG3qM9eQPQYxjp+pqyStd2l9eRyRWd6kMiSnezxZyCO3NZepeGNZ1a0a2u9YhaJmVyFtwuSOnSug05HDTyGTfG75Unr3/+tV6s5U1Pe/3suM3B3ic1pHhtdCspipga4f5WlWI5K8YGSf8A61bk8k8EYcuh5AwIz/jTrzm0kHqMcfWsxNzThmBSLPzJtwX69vbvRdQtBIHebcpMkmy7SylY5UKja2zGPpToRcRGMoiscspLvzuzyD69OKlkKb/OES4/hIAyT6nvVHUrw6Vo8l9MxbYd8Uecc57nvnP4ZrRu2rIKHi3U0sNDktZXDX94oVYk5OOmf89TWl4V05tM0CCCRdspJaQejHqKx9B0GSd11vVT52oXJEkSk5ESnocfQ/hwK7FFCIFHQDFRFN+8wGlCZw+RgKR+ZH+FPJwMmsPXvEcekvHa28X2rUJjiOBT0z0J9BWHd+INZtY1m1XRHigHDSBw4X/gPT8TRKoojSuXfGLR/ZrHbIpZ70NjI/54yCudp2p6vHqAsFSbdm4zhgAWxHJ6emf1ptOLur2sDt0ZJY5/t7SyBkiZyOcY/dPzXbSSmV2EhBVWYAMox19dw9K4mxUPr2lqR1nbH18t8V2RL+ZIAqkb2JyenJ46fT86oRYtZAhkYBnVwrZVeAMfU1bjmjmzsJOOuVIrPSINbyhU2FgiABzjnjJxjPWp7FT5kjnADImFBJxwT3+tAE9r/wAeyfj/ADqaobX/AI9k/H+dTUAQx/8AHzN/wH+VRrL5NiJDyRnA9TmsTXdVu7HxFo1jZtgXcxacFQdyDaMZPTjJ/D8Kvbsqru6hVO0AkjHJyeD16Uk0212KcWkm+oeRE4HlqqE5GxsjfhucHqPTBqIqu8o0gVlwMSfKQc8HAHPrmpFdQMKyTnaylV3EnPOT+NTwNG9xJHJIcHb5f3gR19fxpkkarIsUWVLAMAMOQODn7oHt/WlCosO5g37tTiSNiwPHfvWZYa/aPq72d5C1hdIxUBpAwc+7epGP8a3riJHliBXBJyWBwcAf44qITjNXixyi47mcrKkSku6ocrhlYKRzxnIyeAOT3pPJjjlBVI885xuGPTJGTnH86tSRYuBCT56sMsjcEYHUHpmkkWCNA7PIhXlVkUYzjpyMH86sRE8Za2ZSIy21iD34HPVeD+VF3CpndGZnYqCxKnjrz0PoKkltWCFxsGEcsYgABkcD34ouYiJ33M7gKoAKhieT05FDV9AIhawSTOkZcMsQbe+4dcjv7A/nU4jDPu86XJzskIYYz9Rj0pbe2SS4lacGRgqriVQSOp/rV5mWNRxxkKMe5xSSSVkNu+5AbaRVRIpW8voysQePxBqOS18pGaKV1ZsJwFxycdMe9TNM/nmNAnH94kZ/SqNxcyNeR2yli6lC7dFzkdvy70xGooCqFAwAMAUtVpHuY9oAicsSB1GeCf6Uz7RcqUDRJl2CjBPHv9KAJbtS1sVBwSyj/wAeFUow1u+XMfzLjKyYKnJz1PTP61bnhkMDnz33AbhgLjI5Hb1pj2e+Pck0hJBKg4xk88jHqaAKxaNGZGfehHKQ5OTnABI7e31qLWNNXVtKlguCUSTO0t/AeCpI+o5HvUl0jrGQx3hpCQXKgk5x6c8Hir4kdFAaBtoGODuNJq6swOU0XXZbJ10fWXS3v7cBIpJD8kyHp834de/1yK1tf8Qf2Np4YwN9rmykEfDbm/A5IHH8u9O1PRtO1q38s26ycfLIp2hfof8ACszSvCbWN8t1M8txJCMQmaTds91HbH+RUWmtF949B/h/RjZbr3U5Q2pXeHmaTAMY/uD3PGfpjtXRvLayxtHJJC6MCGVmBBHoabartaXfjzA2GOc8YyP51Zq0klZCPPfEHh3SNMns72xYiV7vb5YkBVQYpM4H4VUrp/Gv/Hlp3/X6P/RUlcxQklogJLDP9v6WwUNtnZsE46ROa7bymlmJkjnDE71ClMY/H3riLNxHrWnlu7yD8TDJXoB1C2UlS5DDqpU5pgRhXIkRIpV2uuD8p4ABA61BGm6OITo7B1GAUB6Dtg8VJ5xkabaJAGblSFx90exz9BSwwmdVUsVWJlxghsHHQHHFAC21z5NuA0cpGTtVIjwPwqaG5DGRmSYAt8oaJumB7euafDbJDjlnYZwznJH09KoeJdQ/szw7e3SvskEZWM/7R4H6mk3ZXY4xcmkupzulTrr3je61bMn2axXyLfbGTuPIJPHux/EVuxPkRnEkYHBlC88rn055xWX4Ws2stCsPLicTyAyvk4IDfge2OvtW1DI8lssTRMpXByPpx0BFTTVo3e71NK0k52Wy0Xy/pv5k0MwjkO+6LJ1CsvPJ4zxmmTyxSTOyylXULt4OCeT079aRp0kjzwARENm7nG78KJR5MszRsy7AHACFgTtPU1Zkc7f6BaXry3Enmx3DsC0vUfd/2mx14qbTYNRsphaPe29xZbSEaSXa8YA4x146Dqfw6VttI7/af30hG3bzC2OnPFWdpuDIMgM0SrnGcZzn+lY+wpqfOlZ+XX17l+0ly8rehSt5oBeKwZFC7gWLcHgeoFXJrmJ1VV3MPMUHCEjqD6VXntXjzmQEsGOVXByfx96bItybwjrH5gy4bHO0Y4/KtiAlktlW5UO0LMcKMFRyo7Hip1uIUuAZpImYjasoIx9D6HmoZR5ccpM0DMxB+ZskdKuETSxkHyWU8d6AIEniXUpW86Pa6AfeHb/9ZqWe5gKoPOjxvGfmHY5/pSb5FlCyEeYsTncOh6c1ViZ7iFdzZX96xxj14P60AT+ZE14GLocOcHI/uj/E1GQsirPI1v8AvGQkbecZHGc89qUkiQy+XuAChsKMdiSf++j+VNIjfa8O1/MlAO9emO3HvQBJcW9uI08q3RizBQRjjqf8ahYm3aMfLHsk4HTIP0pzRsLrymS3LH5x+7HI54/Sm53lXS1RJAAwaMkHt2A5+9QBq9RVWP7QFaJDGNh2gnOcdv0qWGbzAVbAkXhgOn4UjnyZvMIOxhhiB0I70AVzb3bRlGkU85yX/T7vSp5JZ44y3lx/99k/0qZWDAFSCD0IpJEEibSSBkHIOOnNACRJ5cKITnaoGfWn1EISOk8o/EH+YogZirhmLFXIycf0oAWSFJDk5DdmU4NSUUUAcz41/wCPLTv+v0f+ipK5iun8a/8AHlp3/X6P/RUlcxQAgklgu7a5iijlaF2bY77Qcoy9cHuwPStL/hJL0JtGmxADoBfvgHtxsrOooA0W8R3rO7f2VaYOCAbgk5xjn93ViLxfqEYIbSrUjPGLoj8/3dY1FAG7/wAJle/9AiD/AMDD/wDG6xvEmq6l4gsorRbSC3iEoeUfaid4Hb/V/jUdFJpSVmVGTi1JbmnD4kuYj82j2rqFCqGuvugZ4H7vpUB1692oF0u0BXGT9pPOBjkeXj9Kp0USipKzEnZ3L58R35b/AJBluE+X5RetxtP/AFzp7eJb9ixGnR/Njg3zEf8AosZrNopiNCTxHfS536XbcgjP21ienvHVpPF16jOw0m3+bGB9sPAA/wCudYtFAF+TxFfzsWk0y3BOeVvW7kesftSHX7w5I06LJbPN4T/7TqjRQBe/4SC88sp/ZluVPX/Sj/8AG6sQeKLq3lkaPSIQHAGDescYz/0z96yaKANeXxXeySB/7Jt8qMDN4fx/5Z96eni26jUKmjWwA6D7Yf8A43WLRQBsyeLLt/mGi2ZfszXROP8AyHVf/hJtR8xH/s+ElcEj7Y2CfX/V/UVnUUAax8V35kdv7Lt2D4yrXZPY8f6vpyP19aR/FN88wk/s6JQq4VVvDgf+QqyqKANT/hKdR8xW/sy1DDq63ZBbjHP7vBqyPGV9gZ0i3z/1+H/43WFRQBsp4tvY5JGGkW4D4OBeHr/37qT/AITK9/6BEH/gYf8A43WFRQBu/wDCZXv/AECIP/Aw/wDxumR+L71N3/EpgO5i3/H4f/jdYtFAG7/wmV7/ANAiD/wMP/xuj/hMr3/oEQf+Bh/+N1hUUAXNX1q61lLWKSyht0hm80stwXJ+RlxjYP73r2qnRRQB/9k=</Data>
+		</Thumbnail>
+	</Binary>
+</metadata>
